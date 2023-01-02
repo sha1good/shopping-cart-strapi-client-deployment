@@ -5,6 +5,7 @@ import Product from "./pages/Product/Product";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import "./app.scss";
+import Success from "./pages/Success/Success";
 
 function App() {
 
@@ -35,6 +36,10 @@ const Layout = () =>{
           path: "/product/:id",
           element: <Product />
         },
+        {
+          path: "/success",
+          element: <Success />
+        }
       ]
     },
    
