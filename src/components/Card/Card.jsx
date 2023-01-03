@@ -10,7 +10,8 @@ const Card = ({ item }) => {
           <img
             src={
               process.env.REACT_APP_UPLOAD_URL +
-              item?.attributes?.img?.data?.attributes?.url
+              item?.attributes?.img?.data?.attributes?.url ? process.env.REACT_APP_UPLOAD_URL +
+              item?.attributes?.img?.data?.attributes?.url : "/assets/person/2.jpeg"
             }
             alt=""
             className="mainImg"
@@ -18,7 +19,8 @@ const Card = ({ item }) => {
           <img
             src={
               process.env.REACT_APP_UPLOAD_URL +
-              item?.attributes?.img2?.data?.attributes?.url
+              item?.attributes?.img2?.data?.attributes?.url ? process.env.REACT_APP_UPLOAD_URL +
+              item?.attributes?.img2?.data?.attributes?.url : "/assets/person/8.jpeg"
             }
             alt=""
             className="secondImg"

@@ -35,6 +35,9 @@ const Product = () => {
                 src={
                   process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes?.img?.data?.attributes?.url
+                    ? process.env.REACT_APP_UPLOAD_URL +
+                      data?.attributes?.img?.data?.attributes?.url
+                    : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 }
                 alt=""
                 onClick={(event) => setSelectedImage("img")}
@@ -43,6 +46,9 @@ const Product = () => {
                 src={
                   process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes?.img2?.data?.attributes?.url
+                    ? process.env.REACT_APP_UPLOAD_URL +
+                      data?.attributes?.img2?.data?.attributes?.url
+                    : "https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 }
                 alt=""
                 onClick={(event) => setSelectedImage("img2")}
@@ -53,6 +59,9 @@ const Product = () => {
                 src={
                   process.env.REACT_APP_UPLOAD_URL +
                   data?.attributes[selectedImage]?.data?.attributes?.url
+                    ? process.env.REACT_APP_UPLOAD_URL +
+                      data?.attributes[selectedImage]?.data?.attributes?.url
+                    : "https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto=compress&cs=tinysrgb&w=1600"
                 }
                 alt=""
               />
@@ -83,7 +92,7 @@ const Product = () => {
                     desc: data.attributes.desc,
                     price: data.attributes.price,
                     img: data.attributes.img.data.attributes.url,
-                    quantity
+                    quantity,
                   })
                 )
               }
